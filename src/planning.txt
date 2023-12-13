@@ -1,0 +1,58 @@
+massive background
+display
+- weather condition
+- temperature
+- location (with country)
+- feels like temperature
+- wind
+- humidity
+
+search bar
+
+
+
+steps
+- retrieve the data using the api
+- handle possible errors
+- use the information for updating the display
+- add search bar to search for different locations
+
+- run default set up so page is not empty
+
+// retrieves the weather data of the provided location from the API
+async function retrieveData(location) {
+    try {
+        const response = await ajax.get(url + location);
+        return response;
+    } catch (err) {
+        return "No matching location found";
+    }    
+}
+
+// use try-catch or append catch
+
+// update the weather data on the screen
+function updateDisplay(location) {
+    const data = retrieveData(location).catch((err) => {
+        "No matching location found";
+    });
+
+    // select specific parts of the data and store as variables
+    const temperature = 
+    const location = 
+
+    // update the screen display
+    const locationDisplay = document.querySelector();
+    locationDisplay.innerHTML = location;
+}
+
+// add event listener to the search bar
+const searchBar = document.querySelector(search);
+searchBar.addEventListener('keyup', () => {
+    const location = searchBar.value;
+
+    updateDisplay(location);
+})
+
+
+

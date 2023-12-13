@@ -1,0 +1,14 @@
+/* Media query for smaller screens */
+@media (max-width: 770px) {
+  .page-position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .weather-data-separation-line {
+    margin-top: 10px; /* Adjust margin for smaller screens */
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+  }
+}
